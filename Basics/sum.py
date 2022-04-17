@@ -13,3 +13,11 @@
     sum() function.
     [hint: You have to use loop]
 '''
+list1 = input("Enter you number here with \"_\" as a separator")
+list1 = list1.split("_")
+len_of_list = len(list1)
+
+for i in range(len_of_list) :
+    list1[i] = int(list1[i])
+
+print(list1)
