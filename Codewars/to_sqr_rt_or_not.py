@@ -2,16 +2,15 @@
 # Problem Name: To square(root) or not to square(root)
 from math import sqrt
 
-def square_or_square_root(arr):
-    list1 = arr
-    len1 = len(list1)
-    for i in range(0, len1):
-        if sqrt(list1[i]) == int(sqrt(list1[i])):
-            list1[i] = sqrt(list1[i])
-        else:
-            list1[i] = list1[i] ** 2
-    return list1
 
+def square_or_square_root(arr):
+    len_list = len(arr)
+    for i in range(len_list):
+        if sqrt(arr[i]) == int(sqrt(arr[i])):
+            arr[i] = sqrt(arr[i])
+        else:
+            arr[i] = arr[i] ** 2
+    return arr
 
 
 arr = [4, 3, 9, 7, 2, 1]
