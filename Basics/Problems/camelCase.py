@@ -8,13 +8,14 @@ import string
 
 
 def camelCase(str: string):
+    # Your code starts here
     pass
+    # Your code ends here
 
 
-def main():
-    print("Test Case Passed" if camelCase("I am in Bangladesh") == "I aM In BaNgLaDeSh" else "Test Failed")
-    print("Test Case Passed" if camelCase("You and me are doing codes") == "YoU AnD mE aRe DoInG cOdEs" else "Test Failed")
+### Do not edit anything after this line ###
+print("Test Case Passed" if camelCase("I am in Bangladesh") == "I aM In BaNgLaDeSh" else "Test Failed")
+print("Test Case Passed" if camelCase("You and me are doing codes") == "YoU AnD mE aRe DoInG cOdEs" else "Test Failed")
 
-if __name__ == "main":
-    main()
+
 
