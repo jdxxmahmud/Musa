@@ -1,32 +1,25 @@
-### Convert a string into camelcase string
-
-### Input: "My name is musa"
-### Output: "My NaMe Is MuSa"
-
-
 import string
 
 
 def camelCase(str: string):
     # Your code starts here
-    ans = str[0].upper()
-    lenstr = len(str)
-
-    for i in range(1,lenstr):
+    ans = ""
+    lstr = len(str)
+    for i in range(0,lstr):
         if str[i] != " ":
-            if i % 2 == 0:
+            if str[i] == str[i].upper():
                 ans = ans + str[i].lower()
-            else:
-                ans = ans +str[i].upper()
+            elif str[i] == str[i].lower():
+                ans = ans + str[i].upper()
         else:
             ans = ans + str[i]
-    return print(ans)
+    print(ans)
+    return ans
     # Your code ends here
 
 
 ### Do not edit anything after this line ###
 print("Test Case Passed" if camelCase("I am in Bangladesh") == "I aM In BaNgLaDeSh" else "Test Failed")
 print("Test Case Passed" if camelCase("You and me are doing codes") == "YoU AnD mE aRe DoInG cOdEs" else "Test Failed")
-
 
 
