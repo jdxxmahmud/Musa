@@ -13,21 +13,31 @@ def camelCase(str: string):
     prevCapital = True
     lenstr = len(str)
 
-    for i in range(1,lenstr):
+    for i in range(1, lenstr):
         if str[i] != " ":
-            if i % 2 == 0:
+            if prevCapital == True:
+
                 ans = ans + str[i].lower()
+                prevCapital = False
+
             else:
+                
                 ans = ans +str[i].upper()
+                prevCapital = True
+                
         else:
             ans = ans + str[i]
-    return print(ans)
+
+    print(ans)
+
+    return ans
     # Your code ends here
 
 
 ### Do not edit anything after this line ###
-print("Test Case Passed" if camelCase("I am in Bangladesh") == "I aM In BaNgLaDeSh" else "Test Failed")
-print("Test Case Passed" if camelCase("You and me are doing codes") == "YoU AnD mE aRe DoInG cOdEs" else "Test Failed")
+print("Test Case Passed" if camelCase("I am in Bangladesh") == "I aM iN bAnGlAdEsH" else "Test Failed")
+print("Test Case Passed" if camelCase("You and me are doing codes") == "YoU aNd Me ArE dOiNg CoDeS" else "Test Failed")
+print("Test Case Passed" if camelCase("My name is musa") == "My NaMe Is MuSa" else "Test Failed")
 
 
 
