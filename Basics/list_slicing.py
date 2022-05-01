@@ -1,5 +1,8 @@
 # List slicing
 
+from os import sep
+
+
 my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 len_list = len(my_list)
 
@@ -24,7 +27,10 @@ slice7 = my_list[-4:-9:-1]
 
 slice8 = my_list[-4: -9: 1]
 #
-#
-#
 
-print(slice)
+text = "musa sudad"
+
+for i in my_list[9:4:-1]:
+    print(i)
+
+print(text.title())
