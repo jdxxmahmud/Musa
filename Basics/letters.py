@@ -1,1 +1,0 @@
-print(camelcase('JavaScript'))
