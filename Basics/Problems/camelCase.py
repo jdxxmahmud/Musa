@@ -12,8 +12,8 @@ def camelCase(str: string):
 
 
 def main():
-    camelCase("I am in Bangladesh")
-    camelCase("You and me are doing codes")
+    print("Test Case Passed" if camelCase("I am in Bangladesh") == "I aM In BaNgLaDeSh" else "Test Failed")
+    print("Test Case Passed" if camelCase("You and me are doing codes") == "YoU AnD mE aRe DoInG cOdEs" else "Test Failed")
 
 if __name__ == "main":
     main()
