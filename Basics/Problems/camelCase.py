@@ -28,7 +28,6 @@ def camelCase(str: string):
         else:
             ans = ans + str[i]
 
-    print(ans)
 
     return ans
     # Your code ends here
@@ -38,6 +37,7 @@ def camelCase(str: string):
 print("Test Case Passed" if camelCase("I am in Bangladesh") == "I aM iN bAnGlAdEsH" else "Test Failed")
 print("Test Case Passed" if camelCase("You and me are doing codes") == "YoU aNd Me ArE dOiNg CoDeS" else "Test Failed")
 print("Test Case Passed" if camelCase("My name is musa") == "My NaMe Is MuSa" else "Test Failed")
+print("")
 
 
 
