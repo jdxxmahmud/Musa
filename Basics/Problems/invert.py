@@ -1,3 +1,7 @@
+#Problem Statement:Invert the string 
+#Input -> "I am inverting the letters"
+#Output -> " "
+
 import string
 
 
