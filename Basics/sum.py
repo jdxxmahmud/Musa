@@ -27,4 +27,4 @@ Total = 0
 for i in list1 :
     Total = Total + i  
 
-print(f"Total {Total}")
+print(f"Total: {Total}")
