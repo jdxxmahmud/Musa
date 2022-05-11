@@ -6,6 +6,9 @@ Returns the position of the key in the list,
 '''
 
 
+from pickletools import int4
+
+
 def linearSearch(my_list: int, key: int):
 
     len_list = len(my_list)
