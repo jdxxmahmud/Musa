@@ -8,6 +8,8 @@ Returns the position of the key in the list,
 
 from pickletools import int4
 
+from matplotlib.cbook import index_of
+
 
 def linearSearch(my_list: int, key: int):
 
@@ -26,11 +28,8 @@ def main():
     # key = int(input("Enter key: "))
 
     my_list = [10, 20, 30, 12, 6, 50, -2, 79]
-    key = 7
-
+    key = 6
     ans = linearSearch(my_list, key)
-
-    print(f"Correct, position is {ans}" if ans == 4 else "Wrong")
-
+    print(f"Correct, position is {ans}" if ans == my_list.index(key) else "Not Found")
 
 main()
