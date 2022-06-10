@@ -141,6 +141,23 @@ while True:
 
     if(ball.xcor() > 340) and (ball.xcor() < 350) and (ball.ycor() < paddle_right.ycor() + 40 and ball.ycor() > paddle_right.ycor() - 40):
         ball.setx(340)
+        Millions of developers and companies build, ship, and maintain their software on GitHub—the largest and most advanced development platform in the world.
+        
+        Email address
+        Email address
+        83+ million
+        Developers
+        
+        4+ million
+        Organizations
+        
+        200+ million
+        Repositories
+        
+        90%
+        Fortune 100
+        
+        
         ball_dx = ball_dx * -1
         os.system("afplay paddle.wav&")
 
