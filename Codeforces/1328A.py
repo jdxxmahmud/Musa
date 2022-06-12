@@ -5,13 +5,13 @@ t = int(input())
 cases = []
 for _ in range(t):
     a, b = list(map(int, input().split(' ')))
-    print(test_case)
+    # print(a, b)
 
     # Solution code goes here
-    if a == b:
+    if not a % b:
         print(0)
     elif a < b:
         print(b-a)
     else:
-        print((b * ((a//b) + ) - a))
+        print((b * ((a//b) + 1) - a))
     ###
