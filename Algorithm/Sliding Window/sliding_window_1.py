@@ -19,5 +19,5 @@ def max_sum(lst, k=3):
     return max_sum, indexes
 
 
-lst = [1, 2, 3, 6, 7, 8, 1, 2, 9, 6, 2, 10, 5]
+lst = [1, 2, 3, 6, 7, 8, 1, 2, 9, 6, 2, 10, 5, 0, 1, 3, 9, 8, 1]
 print(max_sum(lst, 4))
