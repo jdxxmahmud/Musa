@@ -19,7 +19,9 @@ AB
 
 
 def isSuspicious(tasks, n):
-    checker = [[0, 0] for _ in range(26)]
+    checker = []
+    for _ in range[26]:
+        checker.append([0, 0])
 
     checker[ord(tasks[0]) - ord('A')][0] == 1
     for i in range(1, n):
