@@ -1,14 +1,19 @@
 # 1
 
 '''
-Assume that te variable data refers to the list [8, 9, 7]. 
+Assume that the variable data refers to the list [8, 9, 7, 2]. 
 Here data = [8, 9, 7, 2]
 Write the values of the following expresssions:
 
 a. data[2]
+val = 7
 b. data[-2]
+val = 7
 c. data[0:2]
+val = [8, 9]
 d. data + [7, 9, 8]
+val = 24
+
 
 Note: You can not run the code for this question
 '''
@@ -27,8 +32,17 @@ Examples: For [1, 2, 1] if you reverse this, you get [1, 2, 1]
 
 
 def isPallindrome(arr):
-    # Your code goes here
+    lst = []
+    for i in range(len(arr)-1, -1, -1):
+        lst.append(arr[i])
+
+    if lst == arr:
+        return True
+    else:
+        return False
+        
 
 
 print("Correct" if isPallindrome([1, 2, 1]) == True else "Incorrect")
-print("Correct" if isPallidrome([1, 2, 3]) == False else "Incorrect")
+print("Correct" if isPallindrome([1, 2, 3]) == False else "Incorrect")
+data = [8, 9, 7, 2]

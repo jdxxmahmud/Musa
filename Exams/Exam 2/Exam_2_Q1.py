@@ -18,8 +18,33 @@ Time: 30 minutes
 
 def targ_sum(arr, target):
     # Your code starts here
+        for i in range(0,len(arr)-1):
+
+            for n in range(i+1, len(arr)):
+                if arr[i] + arr[n] == target:
+                    return[i, n]
+            
+        return -1 
+            
+        
 
 
 arr = [1, 2, 3, 4, 8, 12]
 target = 7
 print("Correct" if targ_sum(arr, target) == [2, 3] else "Incorrect")
+print("Correct" if targ_sum([5, 4, 7, 1], 2) == -1 else "Incorrect")
+
+
+'''
+lo = 0
+hi = len(arr) - 1
+
+while arr[lo] + arr[hi] != target:
+        
+
+
+arr = [1, 2, 3, 4, 8, 12]
+target = 7
+
+
+'''
