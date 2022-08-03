@@ -11,6 +11,7 @@ print(identity.gender)
 
 class Person:
     def __init__(self, name, age):
+        #attributes
          self.name = name
          self.age = age
 
@@ -28,12 +29,12 @@ if ask == 'age':
 else:
     print(p1.name)
 
-class my_method:
+class My_Class:
     def __init__(self, age):
         self.age = age
         def next_age(self):
             return print(age+1)
 
     
-x = my_method()
+
 
