@@ -9,26 +9,26 @@ class Animal:
         #Private Attributes 
         self.__colour = colour_
 
-        #Getter Methods
-        def get_colour(self):
-            return self.__colour
+    #Getter Methods
+    def get_colour(self):
+        return self.__colour
         
-        def get_legs(self):
-            return self.legs
+    def get_legs(self):
+        return self.legs
 
-        def get_tail(self):
-            return self.tail
+    def get_tail(self):
+        return self.tail
 
-        #Setter Methods 
-        def set_colour(self, colour_):
-            self.colour = colour_
+    #Setter Methods 
+    def set_colour(self, colour_):
+        self.colour = colour_
 
-        def set_legs(self, legs_):
-            self.legs = legs_
+    def set_legs(self, legs_):
+        self.legs = legs_
 
-        def set_tail(self, tail_):
-            self.tail = tail_
-
+    def set_tail(self, tail_):
+        Sself.tail = tail_
+    
         
         
 
