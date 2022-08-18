@@ -30,20 +30,12 @@ def appendNode(head: Node, val: int):
 
         return head
         
-def printList(head):
-        currentNode = head
-        print("The elements of the list are: ", end="" )
-
-        while currentNode is not None:
-                print(currentNode.val, end=" ")
-                currentNode = currentNode.next
 
 head = appendNode(head, 4)
 head = appendNode(head, 2)
 head = appendNode(head, 1)
 head = appendNode(head, 7)
 head = appendNode(head, 12)
-
 
 printList(head)
 
