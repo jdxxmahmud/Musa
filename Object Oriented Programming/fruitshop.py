@@ -69,3 +69,28 @@ for i in range(n):
     fruit_list.append(newFruit)
 
 fruitPrinter(fruit_list)
+
+def fruit_Number_Update(num, fruitname):
+    for i in fruit_list:
+        if i.name == fruitname:
+            i.quantity = i.quantity - num
+
+            print(i.quantity)
+
+customer_quantity = int(input(''))
+
+customer_fruit = input('')
+
+fruit_Number_Update(customer_quantity, customer_fruit)
+
+checker = input("Want to update: ")
+
+if checker == 'yes':
+    while checker == "yes":
+        customer_quantity = int(input(''))
+
+        customer_fruit = input('')
+
+        fruit_Number_Update(customer_quantity, customer_fruit)
+
+        checker = input("Want to update: ")

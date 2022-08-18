@@ -101,7 +101,3 @@ printer(class8)
 print()
 increase_marks(class8,"B", 3, True)
 printer(class8)
-
-
-
-
