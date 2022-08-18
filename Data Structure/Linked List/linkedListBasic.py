@@ -1,23 +1,52 @@
+
 class Node:
-        def __init__(self, parameterValue):
-                self.val = parameterValue
+        def __init__(self, val_):
+                self.val = val_
                 self.next = None
-                self.onCreateNode()
+
+head = None
+
+def printList(head):
+        currentNode = head
+        print("The elements of the list are: ", end="" )
+
+        while currentNode is not None:
+                print(currentNode.val, end=" ")
+                currentNode = currentNode.next
+
+
+def appendNode(head: Node, val: int):
+
+        if head is None:   # The linked list is empty
+                head = Node(val)
+        else:
+                newNode = Node(val)
+                currentNode = head
+
+                while currentNode.next is not None:
+                        currentNode = currentNode.next
+                
+                currentNode.next = newNode
+
+        return head
         
-        def onCreateNode(self):
-                print("Node has been created:", self.val)
+def printList(head):
+        currentNode = head
+        print("The elements of the list are: ", end="" )
+
+        while currentNode is not None:
+                print(currentNode.val, end=" ")
+                currentNode = currentNode.next
+
+head = appendNode(head, 4)
+head = appendNode(head, 2)
+head = appendNode(head, 1)
+head = appendNode(head, 7)
+head = appendNode(head, 12)
 
 
-new_node1 = Node(5)
+printList(head)
 
-print(new_node1.val)
-new_node2 = Node(7)
 
-new_node1.next = new_node2
-print(new_node2.val)
-# print("Address of new_node1.next:",new_node1.next)
-# print("Address of new_node2:",new_node2)
-
-new_node3 = Node(2)
-new_node2.next = new_node3
+        
 
