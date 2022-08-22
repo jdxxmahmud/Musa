@@ -1,4 +1,3 @@
-
 class Node:
         def __init__(self, val_):
                 self.val = val_
@@ -11,7 +10,7 @@ def printList(head):
         print("The elements of the list are: ", end="" )
 
         while currentNode is not None:
-                print(currentNode.val, end=" ")
+                print(currentNode)
                 currentNode = currentNode.next
 
 
@@ -26,7 +25,7 @@ def appendNode(head: Node, val: int):
                 while currentNode.next is not None:
                         currentNode = currentNode.next
                 
-                currentNode.next = newNode
+                currentNode.next = newNode 
 
         return head
         
