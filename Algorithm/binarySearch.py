@@ -24,7 +24,7 @@ def bin_search(my_list: int, key: int):
 
 
 my_list = [1, 5, 6, 7, 12, 10, 120, 130, 2000]
-key = 120
+key = 1
 
 ans = bin_search(my_list, key)
 print(f"position of {key} in the list is {ans}" 
