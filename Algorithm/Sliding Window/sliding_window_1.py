@@ -1,4 +1,4 @@
-def max_sum(lst, k=3):
+def max_sum(lst, k):
 
     length = len(lst)
     max_sum = -99999
@@ -20,4 +20,4 @@ def max_sum(lst, k=3):
 
 
 lst = [1, 2, 3, 6, 7, 8, 1, 2, 9, 6, 2, 10, 5, 0, 1, 3, 9, 8, 1]
-print(max_sum(lst, 4))
+print(max_sum(lst, 5))

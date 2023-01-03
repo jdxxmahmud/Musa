@@ -32,3 +32,4 @@ def pairfinder(arr, k):
 lst = [1,4,4,5,5,5,6,6,11]
 
 pairfinder(lst,11)
+
