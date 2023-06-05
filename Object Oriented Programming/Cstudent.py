@@ -103,3 +103,8 @@ print()
 increase_marks(class8, "B", 3, True)
 
 printer(class8)
+
+arr = [1,2,3,4]
+key = 5
+hi = len(arr) - 1 
+lo = 0 

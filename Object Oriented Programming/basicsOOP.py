@@ -1,40 +1,26 @@
-class identity:
-    name = 'Musa'#why is this called an object
-    age = 16
-    gender = "Male"
-    occupation = "Professional Racist"
+class Student:
+    def __init__(self, name, grade, age, marks):
+        self.name = name 
+        self.grade = grade 
+        self.age = age 
+        self.marks = marks
 
-print(identity.name)
-print(identity.age)
-print(identity.occupation)
-print(identity.gender)
-
-class Person:
-    def __init__(self, name, age):
-        #attributes
-         self.name = name
-         self.age = age
-
-#print(Person("Musa", 16))
-
-p1 = Person("musa", 16)
-p2 = Person("Sudad", 18)
-p3 = Person('ayan', 12)
-
-ask = input('')
-
-if ask == 'age':
-    print(p1.age)
-    #print(p1) - eta kono kichu dai na keno 
-else:
-    print(p1.name)
-
-class My_Class:
-    def __init__(self, age):
-        self.age = age
-        def next_age(self):
-            return print(age+1)
-
-    
+    def get_name(self):
+        return self.name 
+    def get_age(self):
+        return self.age
+    def get_marks(self):
+        return self.marks
+    def get_grade(self):
+        return self.grade
 
 
+
+s1 = Student('Musa', 9, 17, 98)
+
+print(s1.get_name())
+from student import Student
+
+s2 = Student('Musa', 10, 'B', 98, '202010B')
+
+print(s2.get_studentID())
