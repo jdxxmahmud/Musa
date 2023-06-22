@@ -1,7 +1,7 @@
-from . import Student
+from Student import Student
 
 class StudentGroup:
-    def __init__(self) -> None:
+    def __init__(self):
         self.__student_list = []
 
     def addStudent(self, student: Student):
@@ -16,13 +16,16 @@ class StudentGroup:
     
     # This function will return a list of all the students
     def getAllStudents(self):
-        pass
+        lst = []
+        for student in self.__student_list:
+            lst.append([student.getId(), student.getName(), student.getAge()])
+        return lst 
 
 
     # This function will take a list of students, and print them in the following format
     # Id: 1, Name: Musa, Age: 15
     # ...
     # ...
-    def printTheStudentListNicely(students):
-
-        pass
+    def printTheStudentsListNicely(self, students):
+        for student in students:
+            print(f"Id: {student[0]}, Name: {student[1]}, Age: {student[2]}")

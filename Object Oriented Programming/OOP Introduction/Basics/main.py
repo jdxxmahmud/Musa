@@ -1,4 +1,5 @@
-from . import Student, StudentGroup
+from Student import Student
+from StudentGroup import StudentGroup
 
 if __name__ == "__main__":
     myClass = StudentGroup()
@@ -14,8 +15,8 @@ if __name__ == "__main__":
 
     print(myClass.getStudent(4).getName())
 
-    myStudents = myClass.getAllStudents()
-    myClass.printAllStudentsNicely(myStudents)
+    print(myClass.getAllStudents())
+    myClass.printTheStudentsListNicely(myClass.getAllStudents())
 
 
     
