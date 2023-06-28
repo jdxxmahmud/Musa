@@ -41,3 +41,5 @@ while t:
     tasks = input()
 
     print(isSuspicious(tasks, n))
+
+

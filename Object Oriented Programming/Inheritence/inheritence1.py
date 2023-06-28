@@ -31,8 +31,7 @@ class Vehicle:
         self.windows = windows
 
     def printDescription(self):
-        # print(f'This {self.name} has {self.tires} tires')
-        pass
+        print(f'This {self.name} has {self.tires} tires')
 
     def calculateTotalEnergyOfTheEngine(self, engineNumber, HP):
         print(f'This {self.name} has {engineNumber} engines and energy is {HP * engineNumber}')
