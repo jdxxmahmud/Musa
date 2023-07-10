@@ -7,12 +7,17 @@ company -
 from datetime import date
 
 class Employee:
-    def __init__(self, id, name, position, joiningDate, salary):
-        self.name = name 
+
+    def __init__(self, id, name, position, salary):
         self.id = id 
+        self.name = name 
         self.position = position
-        self.joiningDate = joiningDate
+        self.joiningDate = None ## Automatically add the joining date using datetime 
         self.salary = salary
+
+    def yearlySalaryIncrement(self):
+        # this function will increase and set the salary by 10% when called.
+        pass
 
     #Getter Methods - 
     def getId(self):
@@ -31,8 +36,6 @@ class Employee:
         return self.salary
 
     #Setter Methods 
-    def setId(self, id):
-        self.id = id 
 
     def setName(self, name):
         self.name = name 

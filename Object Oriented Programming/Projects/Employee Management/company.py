@@ -1,31 +1,49 @@
-'''
-company -
-list of employee 
-and the class company will have it's own attributes{revenue, company type}
-methods 
-multiple classes, multiple files 
-method :
-i.profit() 
-i.add profit with the salary conda clean --helpconda clean --helpconda clean --help
-'''
 from datetime import date
 from employee import Employee 
 
 
 class Company:
-    def __init__(self, foundingDate, name, location, industry, totalEmployees, revenue, profit):
+
+    employeeId = 0
+    revenue = None
+    cost = None
+
+    def __init__(self, foundingDate, name, location, industry):
         self.foundingDate = foundingDate
         self.name = name
         self.location = location
         self.industry = industry
-        self.totalEmployees = totalEmployees
-        self.revenue = revenue
-        self.profit = profit
 
         self.employeeList = []
 
-    def addEmployee(self, employee: employee):
+    def addEmployee(self, employee: Employee):
         self.employeeList.append(employee)
+        self.employeeId += 1
+
+
+    def showEmployeeList(self, id):
+        for i in self.employeeList:
+            if self.employeeList[i].getId() == id:
+                return f'ID:{self.employeeList[i].getId()}\nName:{self.employeeList[i].getName()}\nPosition:{self.employeeList[i].getPosition()}'
+
+    def allocatedAmountOfProfitSharingForEmployees():
+        # this will return the amount of profit that will be given to each employee
+        # only applicable for the employee who has working year more than 1
+        pass
+        
+    def findEmployeeById():
+        # This function will return all the details of an employee based on the ID
+        pass
+
+    def findEmployeeByName():
+        # This function will return all the details of an employee based on the name
+        # here the actual name will be title case. 
+        # but searched text can be small letter
+        pass
+
+    def addProfitSharingWithTheSalary():
+        # This will print the employee name and their salary (after addition of profit sharing with salary)
+        pass
 
     #Getter methods
     def getFoundingDate(self):
@@ -41,18 +59,17 @@ class Company:
         return self.industry
         
     def getTotalEmployees(self):
-        return self.totalEmployees
+        return len(self.employeeList)
         
     def getRevenue(self):
         return self.revenue
 
-    def getProfit(self):
-        return self.profit
+    def getCost(self):
+        return self.cost
+    
+    def getEmployeeId(self):
+        return self.getEmployeeId
         
-    def getEmployee(self, id):
-        for i in self.employeeList:
-            if self.employeeList[i].getId() == id:
-                return f'ID:{self.employeeList[i].getId()}\nName:{self.employeeList[i].getName()}\nPosition:{self.employeeList[i].getPosition()}' 
 
     #Setter methods    
     def setFoundingDate(self, foundingDate):
@@ -66,12 +83,12 @@ class Company:
         
     def setIndustry(self, industry):
         self.industry = industry
-
-    def setTotalEmployees(self, totalEmployees):
-        self.totalEmployees = totalEmployees
         
     def setRevenue(self, revenue):
         self.revenue = revenue
 
-    def setProfit(self, profit):
-        self.profit = profit
+    def setCost(self, cost):
+        self.cost = cost
+
+    def setEmployeeId(self, employeeId):
+        self.employeeId = employeeId
