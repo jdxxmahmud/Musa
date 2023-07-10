@@ -68,7 +68,7 @@ class company:
             self.industry = industry
 
         def setTotalEmployees(self, totalemployees):
-            self.totalemployees = totalemployees
+            self.totalEmployees = totalEmployees
         
         def setRevenue(self, revenue):
             self.revenue = revenue
