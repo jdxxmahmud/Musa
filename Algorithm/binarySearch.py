@@ -27,6 +27,4 @@ my_list = [1, 5, 6, 7, 12, 10, 120, 130, 2000]
 key = 1
 
 ans = bin_search(my_list, key)
-print(f"position of {key} in the list is {ans}" 
-      if ans > -1 
-      else "Not found")
+
