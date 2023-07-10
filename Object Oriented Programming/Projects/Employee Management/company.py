@@ -9,69 +9,69 @@ i.profit()
 i.add profit with the salary conda clean --helpconda clean --helpconda clean --help
 '''
 from datetime import date
-from employee import employee 
+from employee import Employee 
 
 
-class company:
-    def __init__(self, founding_date, name, location, industry, totalemployees, revenue, profit):
-        self.founding_date = founding_date
+class Company:
+    def __init__(self, foundingDate, name, location, industry, totalEmployees, revenue, profit):
+        self.foundingDate = foundingDate
         self.name = name
         self.location = location
         self.industry = industry
-        self.totalemployees = totalemployees
+        self.totalEmployees = totalEmployees
         self.revenue = revenue
         self.profit = profit
 
-        self.employee_list = []
+        self.employeeList = []
+
     def addEmployee(self, employee: employee):
-        self.employee_list.append(employee)
+        self.employeeList.append(employee)
 
+    #Getter methods
+    def getFoundingDate(self):
+        return self.foundingDate
+        
+    def getName(self):
+        return self.name
+        
+    def getLocation(self):
+        return self.location
+        
+    def getIndustry(self):
+        return self.industry
+        
+    def getTotalEmployees(self):
+        return self.totalEmployees
+        
+    def getRevenue(self):
+        return self.revenue
 
-        #Getter methods
-        def getFounding_date(self):
-            return self.founding_date
+    def getProfit(self):
+        return self.profit
         
-        def getName(self):
-            return self.name
-        
-        def getLocation(self):
-            return self.location
-        
-        def getIndustry(self):
-            return self.industry
-        
-        def getTotalEmployees(self):
-            return self.totalemployees
-        
-        def getRevenue(self):
-            return self.revenue
+    def getEmployee(self, id):
+        for i in self.employeeList:
+            if self.employeeList[i].getId() == id:
+                return f'ID:{self.employeeList[i].getId()}\nName:{self.employeeList[i].getName()}\nPosition:{self.employeeList[i].getPosition()}' 
 
-        def getProfit(self):
-            return self.profit
+    #Setter methods    
+    def setFoundingDate(self, foundingDate):
+        self.foundingDate = foundingDate
         
-        def getEmployee(self, id):
-            for i in self.employee_list:
-                if self.employee_list[i].getId() == id:
-                    return f'ID:{self.employee_list[i].getId()}\nName:{self.employee_list[i].getName()}\nPosition:{self.employee_list[i].getPosition()}' 
+    def setName(self, name):
+        self.name = name
+        
+    def setLocation(self, location):
+        self.location = location
+        
+    def setIndustry(self, industry):
+        self.industry = industry
 
-        #Setter methods    
-        def setFounding_date(self, founding_date):
-            self.founding_date = founding_date
+    def setTotalEmployees(self, totalEmployees):
+        self.totalEmployees = totalEmployees
         
-        def setName(self, name):
-            self.name = name
-        
-        def setLocation(self, location):
-            self.location = location
-        
-        def setIndustry(self, industry):
-            self.industry = industry
+    def setRevenue(self, revenue):
+        self.revenue = revenue
 
-        def setTotalEmployees(self, totalemployees):
-            self.totalEmployees = totalEmployees
-        
-        def setRevenue(self, revenue):
-            self.revenue = revenue
-
-        def setprofit(self, profit):
-            self.profit = profit
+    def setProfit(self, profit):
+        self.profit = profit

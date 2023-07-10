@@ -6,12 +6,12 @@ company -
 '''
 from datetime import date
 
-class employee:
-    def __init__(self, id, name, position, joining_date, salary):
+class Employee:
+    def __init__(self, id, name, position, joiningDate, salary):
         self.name = name 
         self.id = id 
         self.position = position
-        self.joining_date = joining_date
+        self.joiningDate = joiningDate
         self.salary = salary
 
     #Getter Methods - 
@@ -24,8 +24,8 @@ class employee:
     def getPosition(self):
         return self.position
 
-    def getJoining_Date(self):
-        return self.joining_date
+    def getJoiningDate(self):
+        return self.joiningDate
     
     def getSalary(self):
         return self.salary
@@ -40,15 +40,14 @@ class employee:
     def setPosition(self, position):
         self.position = position
     
-    def setJoining_date(self, joining_date):
-        self.joining_date = joining_date
+    def setJoiningDate(self, joiningDate):
+        self.joiningDate = joiningDate
 
     def setSalary(self, salary):
         self.salary = salary 
-    
-    #Functional Methods 
-    def Numberofyears(self):
-        return (date.today() - self.joining_date)
+     
+    def numberOfYears(self):
+        return (date.today() - self.joiningDate)
 
     
 
