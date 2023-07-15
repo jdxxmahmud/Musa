@@ -13,37 +13,45 @@ class Company:
         self.name = name
         self.location = location
         self.industry = industry
-
+        
         self.employeeList = []
 
     def addEmployee(self, employee: Employee):
         self.employeeList.append(employee)
-        self.employeeId += 1
+        Company.employeeId += 1
+        
 
 
-    def showEmployeeList(self, id):
+    
+        # this will return the amount of profit that will be given to each employee who are working for more than 1 year
+    def allocatedAmountOfProfitSharingForEmployees(self):
+        employeeCount = 0 #employee working for more than a year
+        for i in self.employeeList:
+            if self.employeeList[i].getJoiningDate() - date.today() > date(1, 0, 0):
+                employeeCount += 1
+        return f'{(Company.revenue-Company.cost) / employeeCount} to each {employeeCount} employee' 
+
+        # This function will return all the details of an employee based on the ID
+    def findEmployeeById():
         for i in self.employeeList:
             if self.employeeList[i].getId() == id:
                 return f'ID:{self.employeeList[i].getId()}\nName:{self.employeeList[i].getName()}\nPosition:{self.employeeList[i].getPosition()}'
 
-    def allocatedAmountOfProfitSharingForEmployees():
-        # this will return the amount of profit that will be given to each employee
-        # only applicable for the employee who has working year more than 1
-        pass
-        
-    def findEmployeeById():
-        # This function will return all the details of an employee based on the ID
-        pass
 
-    def findEmployeeByName():
         # This function will return all the details of an employee based on the name
-        # here the actual name will be title case. 
-        # but searched text can be small letter
-        pass
+    def findEmployeeByName(self, name):
+        for i in self.employeeList:
+            if self.employeeList[i].getName().lower() == name.lower():
+               return f'ID:{self.employeeList[i].getId()}\nName:{self.employeeList[i].getName()}\nPosition:{self.employeeList[i].getPosition()}' 
 
-    def addProfitSharingWithTheSalary():
-        # This will print the employee name and their salary (after addition of profit sharing with salary)
-        pass
+
+    # This will print the employee name and their salary (after addition of profit sharing with salary)
+    def addProfitSharingWithTheSalary(self, employee: Employee):
+        if employee.joiningDate() - date.today > date(1, 0, 0):
+            print(f'Employee:{employee.getName()}\nSalary: {newSalary}'.format(newSalary = employee.getSalary()+allocatedAmountOfProfitSharingForEmployees()))
+        else:
+            print(f"Employee:{employee.getName()}\nSalary: {employee.getSalary()}")
+        
 
     #Getter methods
     def getFoundingDate(self):
