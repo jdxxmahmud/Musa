@@ -8,16 +8,22 @@ def rankCompanies(companyList):
 
 
 
+def startProject():
+    myCompanyList = []
+
+    company1 = addDetailsForCompany1()
+    company2 = addDetailsForCompany2()
+
+
+
+if __name__ == "__main__":
+    startProject()
+
 def addDetailsForCompany1():
     company1 = Company(date(1999, 10, 10), "Supermax", "Dhaka", "Large")
     #add 10 employees
-    company1.addEmployee(Employee("Jamil", "Staff", 40000))
+    company1.addEmployee(Employee(company1.getEmployeeId(), "Jamil", "Staff", 40000))
 
 
-
-
-company1 = addDetailsForCompany1()
-
-print(company1)
-
-
+def addDetailsForCompany2():
+    pass
