@@ -4,24 +4,27 @@ methods:
 i.Numberofyears employee have been working based on joining date
 company -
 '''
-from datetime import date
+from datetime import datetime
+
+
+
 class Employee():
 
-    def __init__(self, name, position, salary):
-        from company import Company
-        self.id =  Company.employeeId 
+    def __init__(self, id, name, position, salary, joiningDate = datetime.today()):
+        self.id = id
         self.name = name 
         self.position = position
-        self.joiningDate = date.today()
         self.salary = salary
+        self.joiningDate = joiningDate
 
 
     # this function will increase and set the salary by 10% when called.
-    def yearlySalaryIncrement(self, company):
-        from company import Company
-        for i in company.employeeLists:
-             newSalary = company.employeeList[i].getSalary() * 1.1
-             company.employeeList[i].setSalary(newSalary)
+    def yearlySalaryIncrement(self):
+        self.salary = round(self.salary * 1.1, 2)
+
+    # will return total working days in years, months and dates.
+    def numberOfYears(self):
+        return (datetime.today() - self.joiningDate)
 
     #Getter Methods - 
     def getId(self):
@@ -53,5 +56,3 @@ class Employee():
     def setSalary(self, salary):
         self.salary = salary 
     
-    def numberOfYears(self):
-        return (date.today() - self.joiningDate)

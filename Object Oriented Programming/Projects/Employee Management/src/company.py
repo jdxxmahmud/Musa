@@ -21,7 +21,9 @@ class Company:
         Company.employeeId += 1
         
 
-    # this will return the amount of profit that will be given to each employee who are working for more than 1 year
+
+    
+        # this will return the amount of profit that will be given to each employee who are working for more than 1 year
     def allocatedAmountOfProfitSharingForEmployees(self):
         employeeCount = 0 #employee working for more than a year
         for i in self.employeeList:
