@@ -5,8 +5,9 @@ from employee import Employee
 class Company:
 
     employeeId = 0
-    revenue = None
-    cost = None
+    revenue = 0
+    cost = 0
+    employeeList = []
 
     def __init__(self, foundingDate, name, location, industry):
         self.foundingDate = foundingDate
@@ -14,25 +15,22 @@ class Company:
         self.location = location
         self.industry = industry
         
-        self.employeeList = []
 
     def addEmployee(self, employee: Employee):
         self.employeeList.append(employee)
         Company.employeeId += 1
         
-
-
     
         # this will return the amount of profit that will be given to each employee who are working for more than 1 year
     def allocatedAmountOfProfitSharingForEmployees(self):
         employeeCount = 0 #employee working for more than a year
         for i in self.employeeList:
-            if self.employeeList[i].getJoiningDate() - date.today() > date(1, 0, 0):
+            if self.employeeList[i].numberOfYears()[0] >= 1:
                 employeeCount += 1
         return f'{(Company.revenue-Company.cost) / employeeCount} to each {employeeCount} employee' 
 
         # This function will return all the details of an employee based on the ID
-    def findEmployeeById():
+    def findEmployeeById(self, id):
         for i in self.employeeList:
             if self.employeeList[i].getId() == id:
                 return f'ID:{self.employeeList[i].getId()}\nName:{self.employeeList[i].getName()}\nPosition:{self.employeeList[i].getPosition()}'

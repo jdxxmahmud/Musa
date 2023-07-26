@@ -24,8 +24,27 @@ class Employee():
 
     # will return total working days in years, months and dates.
     def numberOfYears(self):
-        return (datetime.today() - self.joiningDate)
+        days = datetime.today() - self.joiningDate
+        days = (days.days)
 
+        years  = days // 365
+        days = (days % 365)
+
+        months = days // 30 
+        days = days % 30
+
+            
+     
+       
+        # months = (days - (years*365)) / 30 
+        # if months < 1:
+        #     days = (days - (years*365))
+        #     months = 0 
+        # else:
+        #     days = int((months - int(months)) * 30)
+        #     months = int(months)  
+
+        return years, months, days
     #Getter Methods - 
     def getId(self):
         return self.id
