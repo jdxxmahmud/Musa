@@ -14,7 +14,8 @@ def testYearlySalaryIncrement():
     print(employee.getSalary())
 
 def testNumberOfYears():
-    print(employee.numberOfYears())
+    years, months, days = employee.numberOfYears()
+    print(years, months, days)
 
 if __name__ == "__main__":
     employee = Employee(1, "Musa", "Manager", 100000, datetime(2020, 5, 17))
