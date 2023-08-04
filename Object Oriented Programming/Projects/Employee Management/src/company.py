@@ -47,7 +47,7 @@ class Company:
     # This will print the employee name and their salary (after addition of profit sharing with salary)
     def addProfitSharingWithTheSalary(self, employee: Employee):
         if employee.joiningDate() - date.today > date(1, 0, 0):
-            print(f'Employee:{employee.getName()}\nSalary: {newSalary}'.format(newSalary = employee.getSalary()+allocatedAmountOfProfitSharingForEmployees()))
+            print(f'Employee:{employee.getName()}\nSalary: {employee.getSalary()+allocatedAmountOfProfitSharingForEmployees()}')
         else:
             print(f"Employee:{employee.getName()}\nSalary: {employee.getSalary()}")
         
