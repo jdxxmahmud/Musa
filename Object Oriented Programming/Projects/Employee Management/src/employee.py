@@ -32,9 +32,6 @@ class Employee():
 
         months = days // 30 
         days = days % 30
-
-            
-     
        
         # months = (days - (years*365)) / 30 
         # if months < 1:
@@ -45,6 +42,9 @@ class Employee():
         #     months = int(months)  
 
         return years, months, days
+
+    def printFullDetails(self):
+        print(f'Employee ID: {self.id}\nName: {self.name}\nPosition: {self.position}\nSalary: {self.salary}\nJoining Date: {self.joiningDate}\n')
     #Getter Methods - 
     def getId(self):
         return self.id

@@ -1,4 +1,5 @@
 from datetime import date
+from time import sleep
 from employee import Employee 
 
 
@@ -51,6 +52,16 @@ class Company:
             print(f"Employee:{employee.getName()}\nSalary: {employee.getSalary()}")
         
 
+    def printCompanyDetails(self):
+        print(f'Company Name: {self.name}')
+        print(f'Location: {self.location}')
+        print(f'Fouding Date: {self.foundingDate}')
+
+        print("Printing employee details \n\n")
+        for employee in self.employeeList:
+            sleep(1)
+            employee.printFullDetails()
+
     #Getter methods
     def getFoundingDate(self):
         return self.foundingDate
@@ -74,7 +85,7 @@ class Company:
         return self.cost
     
     def getEmployeeId(self):
-        return self.getEmployeeId
+        return self.employeeId
         
 
     #Setter methods    
