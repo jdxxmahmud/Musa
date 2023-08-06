@@ -69,9 +69,6 @@ def startProject():
     company3 = addDetailsForCompany3()
     
 
-    
-    # company2 = addDetailsForCompany2()
-    # company2.printCompanyDetails()
 
 
 
