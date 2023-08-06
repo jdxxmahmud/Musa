@@ -1,0 +1,1 @@
+Objectives of this project are: clarification and experience of writing clean object-oriented code. 
