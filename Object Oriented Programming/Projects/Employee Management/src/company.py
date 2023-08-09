@@ -28,7 +28,7 @@ class Company:
         for i in self.employeeList:
             if self.employeeList[i].numberOfYears()[0] >= 1:
                 employeeCount += 1
-        return f'{(Company.revenue-Company.cost) / employeeCount} to each {employeeCount} employee' 
+        return f'{(Company.revenue - Company.cost) / employeeCount} to each {employeeCount} employee' 
 
         # This function will return all the details of an employee based on the ID
     def findEmployeeById(self, id):
