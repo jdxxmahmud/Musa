@@ -5,21 +5,21 @@ from employee import Employee
 
 class Company:
 
-    employeeId = 0
-    revenue = 0
+    employeeId = 1
     cost = 0
-    employeeList = []
-
-    def __init__(self, foundingDate, name, location, industry):
+    
+    def __init__(self, foundingDate, name, location, industry, revenue = 0):
         self.foundingDate = foundingDate
         self.name = name
         self.location = location
         self.industry = industry
-        
+        self.revenue = revenue
+        self.employeeList = []
+
 
     def addEmployee(self, employee: Employee):
         self.employeeList.append(employee)
-        Company.employeeId += 1
+        self.employeeId += 1
         
     
         # this will return the amount of profit that will be given to each employee who are working for more than 1 year
@@ -59,7 +59,7 @@ class Company:
 
         print("Printing employee details \n\n")
         for employee in self.employeeList:
-            sleep(1)
+            sleep(.2)
             employee.printFullDetails()
 
     #Getter methods
