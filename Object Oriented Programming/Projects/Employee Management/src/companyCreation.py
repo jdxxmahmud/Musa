@@ -2,6 +2,7 @@ from datetime import date
 from employee import Employee
 from company import Company
 from manager import Manager
+from generalManager import GeneralManager
 
 def addDetailsForCompany1():
     company1 = Company(date(1999, 10, 10), "Supermax", "Dhaka", "Large", 100000)
@@ -54,3 +55,24 @@ def addDetailsForCompany3():
     #     company3.printCompanyDetails()
     
     return company3
+
+def addDetailsForCompany4():
+    company4 = Company(date(1969, 2, 8), "Mattle", "Ohio", "Milk", 350000)
+    #employees
+    company4.addEmployee(GeneralManager(company4.getEmployeeId , "Kuddus", 100000))
+    company4.addEmployee(Manager(company4.getEmployeeId, "Enamul", 70000))
+
+    print('Company 4 created')
+
+    return company4
+
+
+def addDetailsForCompany5():
+    company5 = Company(date(1989, 4, 8), "Lolly", "wakanda", "cotton", 750000)
+    #employees
+    company5.addEmployee(GeneralManager(company5.getEmployeeId , "selim", 100000))
+    company5.addEmployee(Manager(company5.getEmployeeId, "rawshan", 70000))
+
+    print('Company 5 created')
+
+    return company5
