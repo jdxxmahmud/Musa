@@ -4,16 +4,16 @@ from employee import Employee
 from datetime import datetime
 
 class Manager(Employee):
-    
-    allocatedProjects = []
-    def __init__(self, name, salary, position = "Manager", joiningDate = datetime.today()):
-        from company import Company
-        self.id = Company.getEmployeeId
+        
+    def __init__(self, id, name, salary, position = "Manager", joiningDate = datetime.today()):
+        self.id = id
         self.name = name 
-        self.position = position
         self.salary = salary
+        self.position = position
         self.joiningDate = joiningDate
+        self.allocatedProjects = []
 
-    def addProject(self, projectList):
+
+    def addProjects(self, projectList):
         self.allocatedProject.extend(projectList)
 

@@ -4,16 +4,15 @@ from employee import Employee
 
 
 class Company:
-
-    employeeId = 1
-    cost = 0
     
-    def __init__(self, foundingDate, name, location, industry, revenue = 0):
+    def __init__(self, foundingDate, name, location, industry, revenue = 0, cost = 0):
+        self.employeeId = 1
         self.foundingDate = foundingDate
         self.name = name
         self.location = location
         self.industry = industry
         self.revenue = revenue
+        self.cost = cost
         self.employeeList = []
         self.employeeId = 1
 
@@ -57,7 +56,7 @@ class Company:
         print(f'Location: {self.getLocation()}')
         print(f'Fouding Date: {self.getFoundingDate()}')
 
-        print("Printing employee details \n\n")
+        print("\nPrinting employee details \n\n")
         for employee in self.employeeList:
             sleep(.2)
             employee.printFullDetails()
