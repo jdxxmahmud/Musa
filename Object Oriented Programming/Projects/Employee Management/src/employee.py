@@ -44,7 +44,7 @@ class Employee():
         return years, months, days
 
     def printFullDetails(self):
-        print(f'Employee ID: {self.id}\nName: {self.name}\nPosition: {self.position}\nSalary: {self.salary}\nJoining Date: {self.joiningDate}\n')
+        print(f'Employee ID: {self.getId()}\nName: {self.getName()}\nPosition: {self.getPosition()}\nSalary: {self.getSalary()}\nJoining Date: {self.getJoiningDate()}\n')
     #Getter Methods - 
     def getId(self):
         return self.id

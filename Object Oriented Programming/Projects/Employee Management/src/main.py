@@ -22,7 +22,7 @@ def startProject():
     
     if input("Do you want to get the detais of Company?   [y/n]\t\t").lower() == "y":
         for company in myCompanyList:
-            print(company.getName())
+            print(company.printCompanyDetails())
 
 
     rankedCompanyList = rankCompanies(myCompanyList[:])
@@ -32,4 +32,5 @@ def startProject():
 
 if __name__ == "__main__":
     startProject()
+
 

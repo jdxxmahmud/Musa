@@ -6,7 +6,7 @@ sys.path.append(parent)
 
 from company import Company
 from datetime import datetime
+from employee import Employee
 
+companyOne = Company(datetime.date(2006, 3, 19), "Hexagon", "Uttara, Dhaka", "Technology", 156000000)
 
-if __name__ == "__main__":
-    pass

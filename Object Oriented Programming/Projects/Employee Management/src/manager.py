@@ -6,8 +6,9 @@ from datetime import datetime
 class Manager(Employee):
     
     allocatedProjects = []
-    def __init__(self, id, name, salary, position = "Manager", joiningDate = datetime.today()):
-        self.id = id
+    def __init__(self, name, salary, position = "Manager", joiningDate = datetime.today()):
+        from company import Company
+        self.id = Company.getEmployeeId
         self.name = name 
         self.position = position
         self.salary = salary

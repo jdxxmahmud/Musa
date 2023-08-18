@@ -15,7 +15,7 @@ class Company:
         self.industry = industry
         self.revenue = revenue
         self.employeeList = []
-
+        self.employeeId = 1
 
     def addEmployee(self, employee: Employee):
         self.employeeList.append(employee)
@@ -53,9 +53,9 @@ class Company:
         
 
     def printCompanyDetails(self):
-        print(f'Company Name: {self.name}')
-        print(f'Location: {self.location}')
-        print(f'Fouding Date: {self.foundingDate}')
+        print(f'Company Name: {self.getName()}')
+        print(f'Location: {self.getLocation()}')
+        print(f'Fouding Date: {self.getFoundingDate()}')
 
         print("Printing employee details \n\n")
         for employee in self.employeeList:
